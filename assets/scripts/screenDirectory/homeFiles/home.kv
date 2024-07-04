@@ -1,0 +1,35 @@
+<Home>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        Image:
+            source: "assets/images/home/vamp.png"
+
+        BoxLayout:
+            orientation: "vertical"
+
+            Label:
+                text: "Welcome to"
+                font_size: "24sp"
+                color: 1, 1, 0, 1
+            
+            Label:
+                text: "BTerror"
+                font_size: "24sp"
+                color: 1, 0, 0, 1
+            BoxLayout:
+                Label:
+                    text: ""
+                Label:
+                    text: ""
+                Button:
+                    text: 'Click'
+                    on_press: root.go_to_terror()
+                Label:
+                    text: ""
+                Label:
+                    text: ""
+
+<Label@Label>:
+    font_size: "18sp"
+    halign: "right"
