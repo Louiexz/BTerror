@@ -3,10 +3,13 @@
 !["BTerror"]('bterror.png')
 
 Aplicativo "BTerror" criado utilizando kivy, com interface simples.
+Dedicado ao aniversário de 9 anos do meu sobrinho.
 
 ## Funcionalidades
 
-    Terror com personagens conhecidos.
+    Terror com personagens autênticos.
+    Sons assustadores (Ou não).
+    Fácil de usar.
 
 ## Pré-requisitos
 
@@ -14,6 +17,7 @@ Aplicativo "BTerror" criado utilizando kivy, com interface simples.
   
      Python 3
      Kivy
+     Pygame
 
 ## Instalação e Uso
 
@@ -36,30 +40,37 @@ Aplicativo "BTerror" criado utilizando kivy, com interface simples.
 
  - Execute o aplicativo:
 
-        python run.py
+        python main.py
 
 ## Estrutura do Projeto
 
     BTerror/
     │
-    ├── run.py           # Arquivo principal do aplicativo
+    ├── main.py           # Arquivo principal do aplicativo
     ├── assets/             # Diretório contendo arquivos necessários
     |   ├── scripts/           # Diretório contendo funções e/ou classes
     │   |   ├── functs/           # Diretório de funções
     |   |   |   ├── manageFiles.py   # Classe para gerenciar telas
     |   |   |   └── sound.py         # Classe para gerenciamento dos sons
     |   |   └── screenDirectory/  # Diretório de telas
+    |   |       ├── introduceFiles/  # Classe e interface da tela de introdução
     |   |       ├── splashFiles/     # Classe e interface da tela splash
     |   |       ├── homeFiles/       # Classe e interface da tela de home
-    |   |       └── terrorFiles/     # Classe e interface da tela terror
+    |   |       ├── terrorFiles/     # Classe e interface da tela terror
+    |   |       └── creditsFiles/    # Classe e interface da tela de créditos
     │   ├── sound/          # Diretório de sons
+    |   |   ├── splash/        # Sons da tela splash
+    │   |   ├── home/          # Sons da tela home
+    |   |   ├── terror/        # Sons da tela terror
+    |   |   └── credits/       # Sons da tela de introdução
     |   └── images/         # Diretório contendo imagens
-    │       ├── home/          # Imagens da tela home
+    │       ├── icon/          # Icones do jogo
     |       ├── splash/        # Imagens da tela splash
+    │       ├── home/          # Imagens da tela home
     |       └── terror/        # Imagens da tela terror
     └── requirements.txt  # Arquivo contendo as dependências do Python
 
 ## Contribuições
-Louiexz - Autor e Desenvolvedor da BTerror<br>
+Louiexz - Autor e Desenvolvedor do BTerror<br>
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.

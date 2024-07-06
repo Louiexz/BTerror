@@ -9,12 +9,14 @@ class ScreenApp(App):
         sound = SoundPlayer()
         
         wm = ScreenManager()
+        wm.add_widget(IntroduceScreen(name='introduce', wm=wm))
+        wm.add_widget(CreditsScreen(name='credits', wm=wm, sound=sound))
         wm.add_widget(SplashScreen(name='splash', wm=wm, sound=sound))
         wm.add_widget(TerrorScreen(name='terror', wm=wm, sound=sound))
         wm.add_widget(HomeScreen(name='home', wm=wm, sound=sound))
         
         # Set 'home' screen as the initial screen
-        wm.current = 'splash'
+        wm.current = 'introduce'
         
         return wm
 

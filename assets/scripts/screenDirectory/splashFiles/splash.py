@@ -8,9 +8,11 @@ class Splash(BoxLayout):
     def __init__(self, wm, sound, **kwargs):
         super().__init__(**kwargs)
         self.wm = wm
-        sound.add_to_playlist("splash/bterror")
         sound.add_to_playlist("splash/monster")
+        self.sound = sound
 
-        Clock.schedule_once(lambda dt:self.trigger_home(dt), 6)
+        Clock.schedule_once(lambda dt:self.trigger_home(dt), 7)
     
-    def trigger_home(self, dt): self.wm.current = "home"
+    def trigger_home(self, dt):
+        self.sound.add_to_playlist("home/let's")
+        self.wm.current = "home"

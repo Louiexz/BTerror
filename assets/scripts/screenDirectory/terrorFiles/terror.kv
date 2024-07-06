@@ -1,42 +1,22 @@
 <Terror>:
-    BoxLayout:
-        spacing: 10
-        padding: 20
-        size: 400, 400
-
-        BoxLayout:
-            Label:
-                text: ""
-            Vert:
-                Label:
-                    text: ""
-                Label:
-                    text: ""
-                Funcao:
-                    text: "Novo"
-                    on_press: root.get_random_terror()
-                Label:
-                    text: ""
-                Label:
-                    text: ""
-            Label:
-                text: ""
-            Vert:
-                Label:
-                    text: ""
-                Label:
-                    text: ""
-                Funcao:
-                    text: "Voltar"
-                    on_press: root.exit()
-                Label:
-                    text: ""
-                Label:
-                    text: ""
-            Label:
-                text: ""
-        Image:
-            source: root.source_image
+    Image:
+        size: root.width, root.height * 0.9
+        source: root.source_image
+    Vert:        
+        Label:
+            text: ""
+        Label:
+            text: ""
+        Label:
+            text: ""
+        
+        BoxButtons:
+            Funcao:
+                text: "Novo"
+                on_press: root.get_random_terror()
+            Funcao:
+                text: "Voltar"
+                on_press: root.exit()
 
 <Vert@BoxLayout>:
     orientation: 'vertical'

@@ -1,0 +1,34 @@
+<CreditsScreen>:
+    Vert:
+        Title:
+            text: "Credits"
+    
+        Vert:
+            Normal:
+                text: "By"
+            Normal:
+                text: "Luiz Augusto"
+            Normal:
+                text: "(Louiexz in Github)"
+            Normal:
+                text: ""
+            Normal:
+                text: "To"
+            Normal:
+                text: "Mickaell Henrique"
+            Normal:
+                text: "Birthday (My nephew)"
+    
+        Vert:
+            padding: root.width * 0.35, root.height * 0.08
+            spacing: 15
+
+            Button:
+                text: "Back"
+                on_press: root.go_to_home()
+            Button:
+                text: "Exit"
+                on_press: root.exit()
+
+<Normal@Label>:
+    font_size: "24sp"

@@ -1,35 +1,34 @@
 <Home>:
-    BoxLayout:
+    Vert:
         orientation: 'vertical'
 
         Image:
             source: "assets/images/home/vamp.png"
 
-        BoxLayout:
-            orientation: "vertical"
-
-            Label:
-                text: "Welcome to"
-                font_size: "24sp"
-                color: 1, 1, 0, 1
+        Vert:
+            Vert:
+                Title:
+                    text: "Welcome to"
+                    color: 1, 1, 0, 1
+                
+                Title:
+                    text: "BTerror"
+                    color: 1, 0, 0, 1
             
-            Label:
-                text: "BTerror"
-                font_size: "24sp"
-                color: 1, 0, 0, 1
-            BoxLayout:
-                Label:
-                    text: ""
-                Label:
-                    text: ""
+            BoxButtons:
+                Button:
+                    text: "Credits"
+                    on_press: root.go_to_credits()
                 Button:
                     text: 'Click'
                     on_press: root.go_to_terror()
-                Label:
-                    text: ""
-                Label:
-                    text: ""
 
-<Label@Label>:
+<BoxButtons@BoxLayout>:
+    padding: root.width / 4, root.height * 0.35
+    spacing: 10
+
+<Vert@BoxLayout>:
+    orientation: "vertical"
+
+<Button@Button>:
     font_size: "18sp"
-    halign: "right"

@@ -11,9 +11,9 @@ class Terror(BoxLayout):
 
     def __init__(self, wm, sound, **kwargs):
         super().__init__(**kwargs)
-        self.source_image = "./assets/images/terror/granny.png"
         self.wm = wm
         self.sound = sound
+        self.source_image = self.initial_image()
 
     def get_random_terror(self):
         # Gera um índice aleatório os.urandom
@@ -23,6 +23,12 @@ class Terror(BoxLayout):
         self.source_image = "assets/images/terror/" + archives[random]
 
         name = archives[random].split(".")
-        self.sound.add_to_playlist(name[0])
+        self.sound.add_to_playlist(f"terror/{name[0]}")
+    
+    def initial_image(self):
+        self.sound.add_to_playlist("terror/granny")
+        return "assets/images/terror/granny.png"
         
-    def exit(self): self.wm.current = 'home'
+    def exit(self):
+        self.sound.add_to_playlist("home/let's")
+        self.wm.current = 'home'

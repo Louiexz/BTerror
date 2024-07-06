@@ -7,6 +7,11 @@ class Home(BoxLayout):
     def __init__(self, wm, sound, **kwargs):
         super().__init__(**kwargs)
         self.wm = wm
-        sound.add_to_playlist("home/let's")
+        self.sound = sound
 
-    def go_to_terror(self): self.wm.current = 'terror'
+    def go_to_terror(self):
+        self.wm.current = 'terror'
+
+    def go_to_credits(self):
+        self.sound.add_to_playlist("credits/bterror")
+        self.wm.current = 'credits'
